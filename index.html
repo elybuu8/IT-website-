@@ -25,7 +25,6 @@ body.loaded #preloader{opacity:0; visibility:hidden;}
 
 /* ======= HEADER ======= */
 header{
-    position: relative;
     background:#000;
     padding:60px 20px 20px 20px;
     text-align:center;
@@ -39,6 +38,9 @@ header h1{
 }
 
 /* ======= PROFILE PICTURE ======= */
+.header-top{
+    display:inline-block;
+}
 .profile-pic{
     width:180px;
     height:180px;
@@ -47,9 +49,8 @@ header h1{
     border:5px solid #ff0000;
     box-shadow:0 0 30px rgba(255,0,0,0.8);
     animation:pulseGlow 2s infinite alternate;
-    display:inline-block;  /* centers below title */
-    position: relative;    /* removed absolute */
-    margin-top:0;
+    display:block;
+    margin:0 auto;
 }
 @keyframes pulseGlow{
     0%{transform:scale(1); box-shadow:0 0 30px rgba(255,0,0,0.8);}
@@ -92,18 +93,18 @@ section p{font-size:16px; line-height:1.7; margin:8px 0; font-weight:300;}
 footer{background:#000; padding:20px; text-align:center; border-top:2px solid #ff0000; margin-top:40px; font-size:14px;}
 
 /* ======= RESPONSIVE ======= */
-@media (max-width: 768px){
+@media (max-width:768px){
     header h1{ font-size:28px; }
-    .profile-pic{ width:120px; height:120px; margin:0 auto; }
+    .profile-pic{ width:120px; height:120px; }
     .nav-btn{ padding:10px 20px; font-size:14px; }
     section{ padding:30px 15px; margin:20px auto; }
     section h2{ font-size:22px; }
     section p{ font-size:14px; }
 }
 
-@media (max-width: 480px){
+@media (max-width:480px){
     header h1{ font-size:22px; }
-    .profile-pic{ width:90px; height:90px; margin:0 auto; }
+    .profile-pic{ width:90px; height:90px; }
     .nav-btn{ padding:8px 15px; font-size:12px; }
     section{ padding:20px 10px; margin:15px auto; }
     section h2{ font-size:20px; }
@@ -130,7 +131,6 @@ footer{background:#000; padding:20px; text-align:center; border-top:2px solid #f
     <a href="work.html" class="nav-btn"><span>🏢 Work Experiences</span></a>
   </nav>
 </header>
-
 
 <section>
     <h2>PERSONAL INFORMATION:</h2>
@@ -174,9 +174,9 @@ footer{background:#000; padding:20px; text-align:center; border-top:2px solid #f
 
 <script>
 window.addEventListener("load", function() {
-    setTimeout(function(){ document.body.classList.add("loaded"); }, 1500);
+    setTimeout(function(){ document.body.classList.add("loaded"); }, 400);
 });
 </script>
+
 </body>
 </html>
-
