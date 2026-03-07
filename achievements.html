@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>elpatronn😎😎</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+/* Use same CSS as Contacts for consistency */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:"Poppins",sans-serif; background:#111; color:#fff; transition:background 0.5s ease; }
+body:not(.loaded){overflow:hidden;}
+#preloader{position:fixed; inset:0; background:#111; display:flex; justify-content:center; align-items:center; flex-direction:column; z-index:9999;}
+.loader-dots{display:flex; gap:15px; margin-bottom:20px;}
+.loader-dots span{width:15px;height:15px;background:#ff0000;border-radius:50%;animation:bounce 0.6s infinite alternate;box-shadow:0 0 10px #ff0000;}
+.loader-dots span:nth-child(2){animation-delay:0.2s;}
+.loader-dots span:nth-child(3){animation-delay:0.4s;}
+@keyframes bounce{0%{transform:translateY(0);opacity:0.6;}50%{transform:translateY(-20px);opacity:1;}100%{transform:translateY(0);opacity:0.6;}}
+.loading-text{color:#ff4d4d;font-weight:600;letter-spacing:1px;animation:pulse 1s infinite;}
+@keyframes pulse{0%,100%{opacity:0.6;}50%{opacity:1;}}
+body.loaded #preloader{opacity:0; visibility:hidden;}
+header{position:relative; background:#000; padding:60px 20px 20px 20px; text-align:center; border-bottom:2px solid #ff0000;}
+header h1{font-size:36px;font-weight:600;letter-spacing:1px;}
+.profile-pic{position:absolute; top:10px; right:20px; width:180px; height:180px; border-radius:50%; object-fit:cover; border:5px solid #ff0000; box-shadow:0 0 30px rgba(255,0,0,0.8); animation:pulseGlow 2s infinite alternate; z-index:10;}
+@keyframes pulseGlow{0%{transform:scale(1); box-shadow:0 0 30px rgba(255,0,0,0.8);}50%{transform:scale(1.08); box-shadow:0 0 50px rgba(255,0,0,1);}100%{transform:scale(1); box-shadow:0 0 30px rgba(255,0,0,0.8);}}
+nav{margin-top:20px;}
+.nav-btn{position:relative; overflow:hidden; background:linear-gradient(135deg,#ff0000,#990000); color:#fff; padding:12px 28px; border-radius:8px; text-decoration:none; display:inline-block; margin:8px; font-weight:500; letter-spacing:0.5px; box-shadow:0 0 5px #ff0000,0 0 10px #ff0000,0 0 20px rgba(255,0,0,0.5); transition:all 0.3s ease;}
+.nav-btn span{position:relative; z-index:2;}
+.nav-btn::after{content:''; position:absolute; top:0; left:-150%; width:50%; height:100%; background:linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%); transform:skewX(-25deg); z-index:1; pointer-events:none; animation:shine 2s infinite;}
+.nav-btn:hover{background:#fff;color:#000;transform:translateY(-3px);box-shadow:0 0 10px #ff0000,0 0 25px #ff0000,0 0 40px #ff0000;}
+@keyframes shine{0%{left:-150%;}100%{left:150%;}}
+section{background:rgba(255,0,0,0.08); padding:50px 25px; margin:30px auto; max-width:900px; border-radius:12px; backdrop-filter:blur(6px); box-shadow:0 0 20px rgba(255,0,0,0.2);}
+section h2{font-size:28px; margin:25px 0 10px 0; color:#ff4d4d; font-weight:600;}
+section p{font-size:16px; line-height:1.7; margin:8px 0; font-weight:300;}
+footer{background:#000; padding:20px; text-align:center; border-top:2px solid #ff0000; margin-top:40px; font-size:14px;}
+</style>
+</head>
+<body>
+<div id="preloader">
+    <div class="loader-dots"><span></span><span></span><span></span></div>
+    <p class="loading-text">Loading...</p>
+</div>
+
+<header>
+<h1>My Personal Website</h1>
+<img src="eli.jpg" alt="Profile Picture" class="profile-pic">
+<nav>
+    <a href="index.html" class="nav-btn"><span>🕶About Me</span></a>
+    <a href="achievements.html" class="nav-btn"><span>🎖Achievements and 🤸‍♂️Skills</span></a>
+    <a href="contacts.html" class="nav-btn"><span>📲Contacts</span></a>
+    <a href="work.html" class="nav-btn"><span>🏢 Work Experiences</span></a>
+</nav>
+</header>
+
+<section>
+    <h2>ACHIEVEMENTS:</h2>
+
+    <p>🏆 Consistent Top Student Grade 1 - Grade 6</p>
+    <p>🥇 Top 1 in Grade 7 and With Honors in Grade 10</p>
+    <p>🏆 With Honors in Grade 11 and Graduated in Grade 12 with Honors</p>
+    <p>🥇 Calabarzon Tournament Winner of MLBB</p>
+    <p>🏆 2nd Place for Contemporary Dance in SMSHS</p>
+
+    <h2>SKILLS:</h2>
+
+    <p>Basic Life Support</p>
+<p>Basic Emergency Response Actions (4 C's)</p>
+<p>Slide Cancel Ult ni Lesley</p>
+<p>Basic Code Knowledge</p>
+<p>Sisigero</p>
+<p>Bike Repair</p>
+<p>Website Editing</p>
+<p>Guitarist Depende sa Mood</p>
+<p>Culinary Knowledge</p>
+<p>Godly Time Management</p>
+</section>
+
+<footer>
+    <p>&copy; 2026 My Website</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+window.addEventListener("load", function() {
+    setTimeout(function(){
+        document.body.classList.add("loaded");
+    }, 400);
+});
+</script>
+
+</body>
+</html>
