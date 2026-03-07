@@ -6,7 +6,7 @@
 <title>elpatronn😎😎</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-/* Use same CSS as Contacts for consistency */
+/* ======= Existing CSS ======= */
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:"Poppins",sans-serif; background:#111; color:#fff; transition:background 0.5s ease; }
 body:not(.loaded){overflow:hidden;}
@@ -33,6 +33,25 @@ section{background:rgba(255,0,0,0.08); padding:50px 25px; margin:30px auto; max-
 section h2{font-size:28px; margin:25px 0 10px 0; color:#ff4d4d; font-weight:600;}
 section p{font-size:16px; line-height:1.7; margin:8px 0; font-weight:300;}
 footer{background:#000; padding:20px; text-align:center; border-top:2px solid #ff0000; margin-top:40px; font-size:14px;}
+
+/* ======= Responsive CSS (add this at the end) ======= */
+@media (max-width: 768px) {
+    .profile-pic { width: 120px; height: 120px; top:5px; right:10px; }
+    header h1 { font-size:28px; }
+    .nav-btn { padding:10px 20px; font-size:14px; }
+    section { padding:30px 15px; margin:20px auto; }
+    section h2 { font-size:22px; }
+    section p { font-size:14px; }
+}
+
+@media (max-width: 480px) {
+    .profile-pic { width:90px; height:90px; top:5px; right:5px; }
+    header h1 { font-size:22px; }
+    .nav-btn { padding:8px 15px; font-size:12px; }
+    section { padding:20px 10px; margin:15px auto; }
+    section h2 { font-size:20px; }
+    section p { font-size:13px; }
+}
 </style>
 </head>
 <body>
@@ -77,4 +96,5 @@ footer{background:#000; padding:20px; text-align:center; border-top:2px solid #f
 window.addEventListener("load", function(){ setTimeout(()=>{ document.body.classList.add("loaded"); }, 1500); });
 </script>
 </body>
+
 </html>
